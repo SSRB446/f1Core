@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+    <Folder Include="Views\Admin\Driver\" />
+    <Folder Include="wwwroot\images\circuits\" />
+    <Folder Include="wwwroot\images\drivers\" />
+    <Folder Include="wwwroot\images\teams\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="F1Manager.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EventFlow.EntityFramework" Version="1.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Localization" Version="9.0.5" />
+  </ItemGroup>
+
+</Project>

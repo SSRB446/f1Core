@@ -1,0 +1,33 @@
+﻿@model IEnumerable<f1Core.Models.Race>
+
+@{
+    ViewData["Title"] = "Race Calendar 賽事日曆";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Date 日期</th>
+            <th>Race Name 賽事名稱</th>
+            <th>Circuit 賽道</th>
+            <th>Season 賽季</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var race in Model)
+        {
+            <tr>
+                <td>@race.Date.ToString("yyyy-MM-dd")</td>
+                <td>
+                    <a asp-controller="Race" asp-action="Details" asp-route-id="@race.RaceId">
+                        @race.Name
+                    </a>
+                </td>
+                <td>@race.Circuit?.Name</td>
+                <td>@race.Season?.Year</td>
+            </tr>
+        }
+    </tbody>
+</table>
